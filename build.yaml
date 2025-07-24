@@ -22,7 +22,13 @@ include:
   - board: seeeduino_xiao_ble
     shield: totem_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y  
+    cmake-args: 
+      -DCONFIG_ZMK_STUDIO=y
+      -DCONFIG_ZMK_STUDIO_LOCKING=n
+      -DCONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+      -DCONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
+      -DCONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=1
+      -DCONFIG_ZMK_KSCAN_DEBOUNCE_RELEASE_MS=5
   - board: seeeduino_xiao_ble
     shield: totem_right
   - board: seeeduino_xiao_ble
